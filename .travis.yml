@@ -12,7 +12,7 @@ install:
 
 before_script:
   - git clone --depth 10 https://github.com/agra-uni-bremen/dependencies.git       
-  - ./bootstrap.sh --deps deps --free --model RelWithDebInfo 
+  - ./bootstrap.sh --cmake --deps deps --free --model RelWithDebInfo 
 
 script:
   - cd build && make && ctest -j2 --timeout 5 
